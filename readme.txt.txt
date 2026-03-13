@@ -1,6 +1,0 @@
-Bienvenido a este programa/aplicación diseñada para estudiar ingles! (depende de tu constancia mejorar tu puntuación :>).
-
-data: Codigo interno.
-assets: Archivos del programa.
-android(apk): Un poco de código necesario y la apk en...
-pc(exe): Un poco de código y el ejecutable en...

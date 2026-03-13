@@ -1,1 +1,9 @@
 EXE
+
+PARA USUARIOS:
+Ve a la carpeta "dist" y descarga "Estudiar.exe", sera una terminal funcionar y agradable a todo usuario :D
+
+PARA DESARROLLADORES:
+
+Ejecutar la siguiente linea de codigo en la terminal de VSCode (u otro) adentro de la carpeta del proyecto, no de "pc(exe)".
+py -m PyInstaller --onefile --add-data "assets;assets" "pc(exe)/Estudiar.py"

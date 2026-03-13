@@ -1,13 +1,16 @@
+import os
+
 columnaA = []
 columnaB = []
 columnaC = []
 columnaD = []
-
-# Escoger cual hoja escanear
 numeroDeHoja = 1  # predeterminado
 
+base = os.path.dirname(os.path.dirname(__file__))
+ruta = os.path.join(base, "assets", f"verbos{numeroDeHoja}.txt")
+
 def cargarVerbos(numeroDeHoja):
-    with open(f"verbos{numeroDeHoja}.txt", "r") as archivo:
+    with open(ruta, "r") as archivo:
         for linea in archivo:
             a, b, c, d = [x.strip() for x in linea.split(",")]
             columnaA.append(a)

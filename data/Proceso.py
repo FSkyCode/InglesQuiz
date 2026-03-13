@@ -1,5 +1,6 @@
-from MotorRandom import jugarRandom
-from MotorRandom import resultado
+from data.MotorRandom import jugarRandom
+from data.MotorRandom import resultado
+from data.MotorRandom import volver_menu
 import os
 
 # Datos
@@ -7,6 +8,7 @@ facil = 2
 medio = 5
 total = 49
 MODO = "Desactivado"
+primeraVez = True
 
 # Funciones
 def limpiarPantalla():
@@ -14,24 +16,43 @@ def limpiarPantalla():
 
 # Inicio
 def iniciarMinijuego():
+    global primeraVez
+    
     limpiarPantalla()
-    print("\nPor: Juan Felipe Sierra Castillo")
-    print("\nQUIZ DE VERBOS EN INGLES\n")
-    print("Pon 1 para el modo facil")
-    print("Pon 2 para el modo medio")
-    print("Pon 3 para el modo dificil")
-    print("Pon 4 para resolver todo")
-    print("Pon 5 para ver ajustes")
+    if primeraVez:
+        print("\nPor: Juan Felipe Sierra Castillo")
+        print("\Escribe 'x'para salir del Quiz en cualquier momento o ir al menu.\n")
+        print("\nQUIZ DE VERBOS EN INGLES\n")
+        print("Pon 1 para el modo facil")
+        print("Pon 2 para el modo medio")
+        print("Pon 3 para el modo dificil")
+        print("Pon 4 para resolver todo")
+        print("Pon 5 para ver ajustes")
+        primeraVez = False
+    else:
+        print("\nPor: Juan Felipe Sierra Castillo")
+        print("\nQUIZ DE VERBOS EN INGLES\n")
+        print("Pon 1 para el modo facil")
+        print("Pon 2 para el modo medio")
+        print("Pon 3 para el modo dificil (en progreso)")
+        print("Pon 4 para resolver todo")
+        print("Pon 5 para ver ajustes")
     start = input("> ")
 
     if start == "1":
         modoFacil()
-    if start == "2":
+    elif start == "2":
         modoMedio()
-    if start == "4":
+    elif start == "2":
+        modoMedio()
+    elif start == "4":
         modoTotal()
-    if start == "5":
+    elif start == "5":
         modoAjustes()
+    elif start == "x":
+        volver_menu()
+    if start not in ["1","2","3","4","5","x"]:
+        iniciarMinijuego()
 
 
 def repetirMinijuego(minijuego):
